@@ -1,26 +1,39 @@
 /* eslint-disable @next/next/no-img-element */
-import { products } from "@/helpers/products";
 
-export default function ProductCard() {
+import Link from "next/link";
+import { IProduct } from "@/interfaces/interfaces";
+
+const ProductCard: React.FC<IProduct> = ({
+  id,
+  name,
+  price,
+  image,
+  stock,
+  description,
+}) => {
   return (
-    <div className="flex flex-wrap gap-4 justify-center items-center ">
-      {products.map((product) => (
-        <div
-          className="flex flex-col gap-2 items-center product-card mb-4 p-4 border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-white dark:hover:bg-gray-700"
-          key={product.name}
-        >
-          <h2 className="text-lg font-bold mb-2 dark:text-white text-center text-gray-800 dark:text-gray-200  ">
-            {product.name}
-          </h2>
+    <Link href={`/products/${id}`}>
+      <div
+        className=" max-w-xs shadow-lg rounded shadow-lg overflow-hidden p-4 bg-white dark:bg-white dark:text-gray-800 hover:scale-105 transition duration-300 ease-in-out"
+        key={name}
+      >
+        <h2 className=" text-lg font-bold mb-2 dark:text-gray-800 text-center text-gray-800 dark:text-gray-200  ">
+          {name}
+        </h2>
 
-          <img
-            className=" object-cover   w-40 h-40 rounded-lg"
-            src={product.image}
-            alt={product.name}
-          />
-          <p className="text-gray-600 dark:text-gray-400  ">${product.price}</p>
-        </div>
-      ))}
-    </div>
+        <img className=" w-full h-auto   rounded-lg" src={image} alt={name} />
+        <p className="text-gray-600 dark:text-gray-800  text-center ">
+          {description}
+        </p>
+        <p className="text-gray-600 font-bold dark:text-gray-400  text-center ">
+          $ {price}.00
+        </p>
+        <p className="text-gray-600 dark:text-gray-400  text-center ">
+          Stock: {stock}
+        </p>
+      </div>
+    </Link>
   );
-}
+};
+
+export default ProductCard;

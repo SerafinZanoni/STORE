@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
-    <footer className=" bg-gray-100 p-4">
+    <footer className=" bg-gray-100 p-4  bg-navbar-gradient-footer">
       <div className="flex justify-between items-center">
         <div className="flex space-x-4 text-gray-800  ">
           <Link href="/about">About Us</Link>

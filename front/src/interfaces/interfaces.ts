@@ -8,12 +8,13 @@ export interface User {
 }
 
 export interface IProduct {
+  id: number;
   name: string;
   description: string;
   price: number;
   stock: number;
   image: string;
-  categoryId: number;
+  categoryId?: number;
 }
 
 export interface ICategory {
@@ -31,4 +32,18 @@ export interface Order {
 export interface Credential {
   id: number;
   password: string;
+}
+
+export interface IProductDetail {
+  name: string;
+  imageUrl: string;
+  price: number;
+  description: string;
+}
+
+export interface IProductDetailProps {
+  params: {
+    id: string;
+  };
+  product: IProduct;
 }

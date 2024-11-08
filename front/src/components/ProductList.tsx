@@ -1,11 +1,19 @@
 import ProductCard from "./ProductCard";
-
+import { products } from "@/helpers/mockProducts";
 export const ProductList: React.FC = () => {
   return (
-    <div className="container mx-auto mt-8">
-      <div className="flex gap-4 flex-wrap">
-        <ProductCard />
-      </div>
+    <div className=" flex flex-wrap gap-4 justify-center items-center mb-4  ">
+      {products.map((product) => (
+        <ProductCard
+          id={product.id}
+          key={product.name}
+          name={product.name}
+          image={product.image}
+          price={product.price}
+          description={product.description}
+          stock={product.stock}
+        />
+      ))}
     </div>
   );
 };

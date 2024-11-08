@@ -4,18 +4,18 @@ import Link from "next/link";
 
 const Navbar: React.FC = () => {
   return (
-    <header className=" flex justify-between items-center p-4 bg-gray-100  ">
+    <header className=" flex justify-between items-center p-4  bg-navbar-gradient-navbar ">
       <div className="flex items-center">
         <Link href="/">
-          <div className="flex items-center">
+          <div className="flex items-center ">
             <img
-              src="https://i.pinimg.com/564x/f2/04/3e/f2043e8a5b3310dce68feb281576ac92.jpg"
+              src="https://www.svgrepo.com/show/535115/alien.svg"
               alt="Ecommerce Logo"
-              className="rounded-full w-20 h-30 mr-2"
+              className="rounded-full w-20 h-20  mr-2 p-1"
             />
 
-            <h1 className="text-2xl text-gray-800 font-bold tracking-wide    ml-2">
-              Next Ecommerce
+            <h1 className="text-2xl text-gray-900 font-bold tracking-wide    ml-2">
+              Alien Shop
             </h1>
           </div>
         </Link>
@@ -23,16 +23,36 @@ const Navbar: React.FC = () => {
       <nav className="flex items-center">
         <ul className="flex space-x-4 text-gray-800 ">
           <li>
-            <Link href="/home">Home</Link>
+            <Link
+              className=" transition duration-300 hover:font-bold  "
+              href="/home"
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <Link href="/checkout">Checkout</Link>
+            <Link
+              className="transition duration-300 hover:font-bold "
+              href="/cart"
+            >
+              Checkout
+            </Link>
           </li>
           <li>
-            <Link href="/login">Login | Register</Link>
+            <Link
+              className="transition duration-300 hover:font-bold "
+              href="/dashboard"
+            >
+              Login | Register
+            </Link>
           </li>
           <li>
-            <Link href="/about">About Us</Link>
+            <Link
+              className="transition duration-300 hover:font-bold "
+              href="/about"
+            >
+              About Us
+            </Link>
           </li>
         </ul>
       </nav>

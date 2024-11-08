@@ -12,6 +12,16 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        "navbar-gradient-navbar":
+          "linear-gradient(180deg, #742dce 18%, #430b6b 73%, #000000 100%)",
+        "navbar-gradient-footer":
+          "linear-gradient(180deg, #000000 0%,  #742dce 27%)",
+      },
+      button: {
+        navLink:
+          "background-image: linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%,)",
+      },
     },
   },
   plugins: [],
