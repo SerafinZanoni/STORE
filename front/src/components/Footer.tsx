@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       <div className="flex justify-between items-center">
         <div className="flex space-x-4 text-gray-800  ">
           <Link href="/about">About Us</Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="/register">Contact</Link>
           <Link href="/faq">FAQ</Link>
         </div>
         <p className="text-gray-800 ">

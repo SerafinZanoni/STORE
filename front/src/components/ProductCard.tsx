@@ -14,14 +14,14 @@ const ProductCard: React.FC<IProduct> = ({
   return (
     <Link href={`/products/${id}`}>
       <div
-        className=" max-w-xs shadow-lg rounded shadow-lg overflow-hidden p-4 bg-white dark:bg-white dark:text-gray-800 hover:scale-105 transition duration-300 ease-in-out"
+        className="   max-w-xs shadow-lg rounded shadow-lg overflow-hidden p-4 bg-white  hover:scale-105 transition duration-300 ease-in-out"
         key={name}
       >
-        <h2 className=" text-lg font-bold mb-2 dark:text-gray-800 text-center text-gray-800 dark:text-gray-200  ">
+        <h2 className=" text-lg font-bold mb-2  text-center text-gray-800   ">
           {name}
         </h2>
 
-        <img className=" w-full h-auto   rounded-lg" src={image} alt={name} />
+        <img className=" w-full h-auto   rounded-lg " src={image} alt={name} />
         <p className="text-gray-600 dark:text-gray-800  text-center ">
           {description}
         </p>
