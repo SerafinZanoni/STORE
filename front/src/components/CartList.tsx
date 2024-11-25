@@ -5,13 +5,12 @@ import { IProduct } from "@/interfaces/interfaces";
 import CartItem from "./CartItem";
 
 const CartList: React.FC = () => {
-  const [cart, setCart] = useState<IProduct[]>([]); // Estado para almacenar el carrito
+  const [cart, setCart] = useState<IProduct[]>([]);
 
   useEffect(() => {
-    // Cargar datos del carrito desde localStorage después de montar el componente
     const storedCart = JSON.parse(localStorage.getItem("cart") || "[]");
     setCart(storedCart);
-  }, []); // Solo ejecuta el efecto al montar el componente
+  }, []);
 
   return (
     <>

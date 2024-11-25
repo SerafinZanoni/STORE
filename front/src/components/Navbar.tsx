@@ -55,7 +55,6 @@ const Navbar: React.FC = () => {
         <ul className="flex space-x-8 text-gray-800">
           {userData ? (
             <>
-              {/* Mostrar solo si la sesión está iniciada */}
               <li>
                 <Link
                   className="transition duration-300 hover:font-bold text-slate-900"
@@ -100,7 +99,6 @@ const Navbar: React.FC = () => {
             </>
           ) : (
             <>
-              {/* Mostrar solo si no hay sesión */}
               <li>
                 <Link
                   className="transition duration-300 hover:font-bold text-slate-900"
