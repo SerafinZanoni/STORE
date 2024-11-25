@@ -4,7 +4,7 @@ import React from "react";
 const LandingPage: React.FC = () => {
   return (
     <>
-      <main className="flex flex-col items-center justify-center h-screen">
+      <div className="flex flex-col items-center justify-center h-screen">
         <h1 className="text-4xl font-bold hover:scale-105 ">
           Welcome to Alien Shop
         </h1>
@@ -16,7 +16,7 @@ const LandingPage: React.FC = () => {
         >
           Shop Now
         </Link>
-      </main>
+      </div>
     </>
   );
 };

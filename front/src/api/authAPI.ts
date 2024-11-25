@@ -20,7 +20,7 @@ export async function register(formData: IRegisterProps) {
         text: "Registered successfully",
         icon: "success",
         confirmButtonText: "Ok",
-        background: "#fff",
+        background: "#000000",
       });
       return res.json();
     }
@@ -31,6 +31,7 @@ export async function register(formData: IRegisterProps) {
       text: "Something went wrong",
       icon: "error",
       confirmButtonText: "Ok",
+      background: "#000000",
     });
   }
 }
@@ -53,6 +54,7 @@ export async function login(formData: IUserDataLogin) {
         text: "Logged in successfully",
         icon: "success",
         confirmButtonText: "Ok",
+        background: "#000000",
       });
       return res.json();
     }
@@ -63,6 +65,7 @@ export async function login(formData: IUserDataLogin) {
       text: "Something went wrong",
       icon: "error",
       confirmButtonText: "Ok",
+      background: "#000000",
     });
   }
 }

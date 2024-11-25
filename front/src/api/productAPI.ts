@@ -24,7 +24,7 @@ export async function getProductById(id: string): Promise<IProduct> {
     const productFiltered = products.find(
       (product) => product.id.toString() === id
     );
-    if (!productFiltered) throw new Error("El producto no se encontró");
+    if (!productFiltered) throw new Error("Product not found");
     return productFiltered;
   } catch (error) {
     throw new Error(`Error obtaining the product: ${error}`);

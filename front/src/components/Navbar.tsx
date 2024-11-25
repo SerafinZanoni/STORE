@@ -25,11 +25,12 @@ const Navbar: React.FC = () => {
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, log me out!",
+      background: "#000000",
     }).then((result) => {
       if (result.isConfirmed) {
         Cookies.remove("userData");
         setUserData(null);
-        router.push("/home");
+        router.push("/");
       }
     });
   };
@@ -63,16 +64,10 @@ const Navbar: React.FC = () => {
                   My Profile
                 </Link>
               </li>
-              <li>
-                <Link
-                  className="transition duration-300 hover:font-bold text-slate-900"
-                  href="/about"
-                >
-                  About Us
-                </Link>
-              </li>
+
               <li>
                 <button
+                  className="transition duration-300 hover:font-bold text-slate-900"
                   onClick={() => {
                     handleLogout();
                   }}

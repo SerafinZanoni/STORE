@@ -24,7 +24,7 @@ const Login: React.FC = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value.trim() });
-    setErrors({ ...errors, [name]: "" }); // Limpiar errores del campo actual
+    setErrors({ ...errors, [name]: "" });
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -41,6 +41,7 @@ const Login: React.FC = () => {
           .filter((msg) => msg)
           .map((msg) => `<li>${msg}</li>`)
           .join("")}</ul>`,
+        background: "#000000",
       });
       return;
     }
@@ -56,15 +57,9 @@ const Login: React.FC = () => {
       });
       // localStorage.setItem("UserSession", JSON.stringify({ token, user }));
 
-      router.push("/");
+      router.push("/home");
     } catch (error) {
-      console.error(error);
-
-      await Swal.fire({
-        icon: "error",
-        title: "Error",
-        text: "An error occurred while logging in.",
-      });
+      console.log(error);
     }
   };
 

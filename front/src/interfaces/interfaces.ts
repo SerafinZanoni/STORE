@@ -20,6 +20,7 @@ export interface IProductDetailProps {
 export interface IUserDataLogin {
   email: string;
   password: string;
+  token?: string;
 }
 
 export interface IRegisterProps {
@@ -44,4 +45,27 @@ export interface FormData {
   password: string;
   address: string;
   phone: string;
+}
+
+export interface IUserSession {
+  token: string;
+  user: {
+    id: number;
+    name: string;
+    email: string;
+    address: string;
+    phone: string;
+    role: string;
+    credential: {
+      id: number;
+      password: string;
+    };
+  };
+}
+
+export interface IUserOrder {
+  id: number;
+  date: string;
+  status: string;
+  products: IProduct[];
 }

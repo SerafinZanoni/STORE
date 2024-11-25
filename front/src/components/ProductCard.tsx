@@ -26,7 +26,7 @@ const ProductCard: React.FC<IProduct> = ({
           {name}
         </h2>
 
-        <p className="text-gray-600 dark:text-gray-800  text-center ">
+        <p className="  text-gray-600 dark:text-gray-800  text-center ">
           {description}
         </p>
         <div className="flex justify-between items-center mt-4">

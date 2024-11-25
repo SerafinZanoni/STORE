@@ -15,10 +15,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
-        <Navbar />
-        {children}
-        <Footer />
+      <body className="antialiased bg-black text-white flex flex-col min-h-screen">
+        {/* Navbar */}
+        <header className="sticky top-0 z-50">
+          <Navbar />
+        </header>
+
+        {/* Contenido principal */}
+        <main className="flex-grow">{children}</main>
+
+        {/* Footer */}
+        <footer className="bg-gray-900">
+          <Footer />
+        </footer>
       </body>
     </html>
   );
