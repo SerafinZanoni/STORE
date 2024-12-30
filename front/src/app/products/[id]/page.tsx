@@ -4,7 +4,7 @@ import { IProduct, IProductDetailProps } from "@/interfaces/interfaces";
 import { getProductById } from "../../../api/productAPI";
 import AddToCart from "@/components/AddToCart";
 
-const ProductDetail: React.FC<IProductDetailProps> = async ({ params }) => {
+const Product: React.FC<IProductDetailProps> = async ({ params }) => {
   let product: IProduct | null = null;
 
   try {
@@ -38,4 +38,4 @@ const ProductDetail: React.FC<IProductDetailProps> = async ({ params }) => {
   );
 };
 
-export default ProductDetail;
+export default Product;
